@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>AutoRenew</Name>
+  <Author>Andrew Morgan</Author>
+  <Version>1.2.0</Version>
+  <Active>False</Active>
+  <Type>Server</Type>
+  <Description>Processes items that have been renewed (or not) by the lending library automatically and notifies patrons.</Description>
+  <Forms />
+  <Settings>
+    <Setting name="RenewEmail" value="Item Renewed" type="string">
+      <Description>Name of e-mail to be sent when a renewal is granted.</Description>
+    </Setting>
+    <Setting name="DenyEmail" value="Item Denied" type="string">
+      <Description>Name of e-mail to be sent when a renewal is denied.</Description>
+    </Setting>
+    <Setting name="LibraryUseEmail" value="Library Use Only - Item Renewed" type="string">
+      <Description>Name of e-mail to be sent to the Borrowing Manager when an in-library use only item is renewed so the due date can be updated while it is on the shelf. Alternatively, you could use this to send a different e-mail to the patron for in-library use only items.</Description>
+    </Setting>
+    <Setting name="Exclusions" value="" type="string">
+      <Description>NVTGCs to exclude from AutoRenew. Enclose in single quotes, and multiple NVTGCs with commas. Example: 'ex1', 'ex2', 'ex3'</Description>
+    </Setting>
+  </Settings>
+  <Files>
+    <File>AutoRenew.lua</File>
+  </Files>
+</Configuration>
